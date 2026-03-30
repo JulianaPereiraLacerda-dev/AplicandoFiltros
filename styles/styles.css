@@ -31,3 +31,47 @@ input{
     flex: 1;
     min-width: 200px;
 }
+.card{
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.08);
+    transition: 0.2s;
+    margin: 10px;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.lista-produtos{
+    display: grid;
+    /*
+        Define quantas colunas vai ter
+        repeat -> repete um padrão de colunas
+        auto-fit -> Cria o máximo de colunas que couberem no espaço da tela
+    */
+    grid-template-columns: repeat(auto-fit,  minmax(220px, 1fr)  );
+    gap: 20px;
+}
+
+.card h2{
+    font-size: 18px;
+    color: #222222;
+}
+.cat{
+    color: #666666;
+
+}
+.preco{
+    color: #03571f;
+    font-weight: bold;
+    font-size: 18px;
+}
+.mensagem{
+    /*
+        Controla em quais colunas o elemento vai ficar
+        1 -> Começa na primeira linha da coluna
+        -1 -> Vai até a última linha da coluna 
+        Vai até o final, não importam quantas colunas existam
+    */
+    grid-column: 1 / -1;
+}
