@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de produtos</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <h1>Catálogo de Produtos</h1>
     <div class="filtros">
-        <input type="text" id="campoBusca">
+        <input type="text" id="campoBusca" placeholder= "Digite para buscar um produto">
+        <select name="" id="ordenacao">
+            <option value="nome-az">Nome (A-Z)</option>
+            <option value="nome-za">Nome (Z-A)</option>
+            <option value="preco-menor">Menor Preço</option>
+            <option value="preco-maior">Maior Preço</option>
+        </select>
     </div>
+    
+    <div id="lista-produtos" class="lista-produtos"></div>
+    <script src="js/scripts.js"></script>
     
 </body>
 </html>
